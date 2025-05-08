@@ -1,0 +1,29 @@
+# YOLO model files (if hosted externally)
+train_yolo9_v1/weights/best.pt
+*.pt
+
+# Python virtual environments
+venv/
+env/
+.env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables file
+.env
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
