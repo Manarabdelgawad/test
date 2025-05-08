@@ -1,0 +1,24 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libgl1 \
+    libpng-dev \
+    libjpeg-dev \
+    libblas3 \
+    liblapack3 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy files
+COPY . /app/
+
+# Set up virtual environment and install dependencies
+RUN python -m venv --copies /opt/venv && /opt/venv/bin/pip install --no-cache-dir -r requirements.txt
+
+# Set PATH
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Command to run the app
+CMD ["gunicorn", "app:app"]
