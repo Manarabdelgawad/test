@@ -1,6 +1,4 @@
-# YOLO model files (if hosted externally)
-train_yolo9_v1/weights/best.pt
-*.pt
+
 
 # Python virtual environments
 venv/
