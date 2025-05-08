@@ -1,5 +1,3 @@
-
-
 # Python virtual environments
 venv/
 env/
@@ -20,8 +18,11 @@ __pycache__/
 *.bak
 *.swp
 
-# macOS
-.DS_Store
-
 # Windows
 Thumbs.db
+
+# Project-specific directories
+space_junks/
+.vscode/
+# JSON files
+*.json
